@@ -2,20 +2,9 @@
 
 return [
 
-    /*
-    |--------------------------------------------------------------------------
-    | Authentication Defaults
-    |--------------------------------------------------------------------------
-    |
-    | This option controls the default authentication "guard" and password
-    | reset options for your application. You may change these defaults
-    | as required, but they're a perfect start for most applications.
-    |
-    */
-
     'defaults' => [
-        'guard' => 'web',
-        'passwords' => 'users',
+        'guard' => env('AUTH_GUARD','web'),
+        'passwords' => env('AUTH_PASSWORD_BROKER','users'),
     ],
 
     /*
@@ -62,7 +51,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => App\Models\User::class,
+            'model' => App\Models\UserModel::class,
         ],
 
         // 'users' => [
@@ -93,7 +82,7 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
-            'table' => 'password_reset_tokens',
+            'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE','password_reset_tokens'),
             'expire' => 60,
             'throttle' => 60,
         ],
@@ -110,6 +99,6 @@ return [
     |
     */
 
-    'password_timeout' => 10800,
+    'password_timeout' => env('AUTH_PASSWORD_TIMOUT',10800),
 
 ];
