@@ -99,7 +99,7 @@ class LokasiController extends Controller
                 'kecamatn_lokasi' => 'required|string|min:2',
                 'kota_kab_lokasi' => 'required|string|min:2',
                 'provinsi_lokasi' => 'required|string|min:2'
-            ];
+            ]; 
         
             $validator = Validator::make($request->all(), $rules);
         

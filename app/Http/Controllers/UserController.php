@@ -24,7 +24,7 @@ class UserController extends Controller
         ];
 
         $activeMenu = 'user'; //set menu yang sedang aktif
-        $user = UserModel::all(); // ambil data admin untuk fitur admin
+        $user = UserModel::all(); // ambil data user untuk fitur user
         return view('user.index', ['breadcrumb' => $breadcrumb, 'page' => $page,'user' => $user, 'activeMenu' => $activeMenu]);
     }
 
