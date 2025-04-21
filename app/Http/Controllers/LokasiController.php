@@ -35,7 +35,7 @@ class LokasiController extends Controller
             'kota_kab_lokasi', 'provinsi_lokasi'
         );
 
-        // Filter data user berdasarkan admin_id
+        // Filter data user berdasarkan 
         if ($request->id_lokasi) {
             $Lokasi->where('id_lokasi',$request->id_lokasi);
         }

@@ -46,12 +46,8 @@ class PenjualanController extends Controller
         ->with('tanah');
 
         // Filter data user berdasarkan admin_id
-        if ($request->id_nasabah) {
-            $penjualan->where('id_nasabah',$request->id_nasabah);
-        }
-
-        if ($request->id_tanah) {
-            $penjualan->where('id_tanah',$request->id_tanah);
+        if ($request->id_penjualan) {
+            $penjualan->where('id_penjualan',$request->id_penjualan);
         }
 
         return DataTables::of($penjualan)
@@ -191,7 +187,7 @@ class PenjualanController extends Controller
         // cek apakah request dari ajax
         if ($request->ajax() || $request->wantsJson()) {
             $penjualan = PenjualanModel::find($id);
-            if ($penjualan) {
+            if ($penjualan) { 
                 $penjualan->delete();
                 return response()->json([
                     'status'  => true,

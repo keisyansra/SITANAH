@@ -23,7 +23,7 @@
   <!-- /.login-logo -->
   <div class="card card-outline card-primary">
     <div class="card-header text-center">
-      <a href="{{ url('/') }}" class="h1"><b>SITANAH Makam</a>
+      <a href="{{ url('/') }}" class="h1"><b>Grand Heaven</a>
     </div>
     <div class="card-body">
       <p class="login-box-msg">Sign in to start your session</p>

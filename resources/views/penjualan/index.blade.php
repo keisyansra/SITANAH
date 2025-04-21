@@ -73,7 +73,7 @@ var dataPenjualan;
                 "dataType": "json",
                 "type": "POST",
                 "data": function(d) {
-                    d.id_penjualan = $('#penjualan_filter').val();
+                    d.id_nasabah = $('#penjualan_filter').val();
                 }
             },
             columns: [
